@@ -34,10 +34,12 @@ class MainHeadReusableView: UICollectionReusableView {
         
         markImg = UIImageView.init(frame: CGRect(x: 10, y: 0, width: 30, height: 30))
         markImg?.center.y = self.center.y
-        markImg?.layer.cornerRadius = 15
+        markImg?.layer.cornerRadius = 16
+        markImg?.backgroundColor = UIColor.blue
         headView?.addSubview(markImg!)
         
-        titleLab = UILabel.init(frame: CGRect(x: (markImg?.bounds.maxX ?? 40) + 8, y:self.center.y , width: 100, height: self.bounds.height))
+        titleLab = UILabel.init(frame: CGRect(x:  50, y:0 , width: 100, height: self.bounds.height))
+        titleLab?.center.y = self.center.y
         titleLab?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
         headView?.addSubview(titleLab!)
     

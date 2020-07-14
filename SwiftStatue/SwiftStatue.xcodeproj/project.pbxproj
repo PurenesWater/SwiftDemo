@@ -21,6 +21,8 @@
 		A057712F24BD4AE900344C0F /* MainHeadReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */; };
 		A057713124BD4B2B00344C0F /* PublicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057713024BD4B2B00344C0F /* PublicData.swift */; };
 		A057713324BD4B5500344C0F /* HomeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057713224BD4B5500344C0F /* HomeHeadView.swift */; };
+		A0FDB96E24BDA4A000713836 /* ItemCtionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FDB96C24BDA4A000713836 /* ItemCtionViewCell.swift */; };
+		A0FDB96F24BDA4A000713836 /* ItemCtionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FDB96D24BDA4A000713836 /* ItemCtionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeadReusableView.swift; sourceTree = "<group>"; };
 		A057713024BD4B2B00344C0F /* PublicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicData.swift; sourceTree = "<group>"; };
 		A057713224BD4B5500344C0F /* HomeHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeadView.swift; sourceTree = "<group>"; };
+		A0FDB96C24BDA4A000713836 /* ItemCtionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCtionViewCell.swift; sourceTree = "<group>"; };
+		A0FDB96D24BDA4A000713836 /* ItemCtionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCtionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */,
+				A0FDB96C24BDA4A000713836 /* ItemCtionViewCell.swift */,
+				A0FDB96D24BDA4A000713836 /* ItemCtionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05770F624BD403400344C0F /* LaunchScreen.storyboard in Resources */,
+				A0FDB96F24BDA4A000713836 /* ItemCtionViewCell.xib in Resources */,
 				A05770F324BD403400344C0F /* Assets.xcassets in Resources */,
 				A05770F124BD403100344C0F /* Main.storyboard in Resources */,
 			);
@@ -384,6 +391,7 @@
 				A05770EE24BD403100344C0F /* ViewController.swift in Sources */,
 				A057712D24BD4A7200344C0F /* MyMainViewController.swift in Sources */,
 				A057712F24BD4AE900344C0F /* MainHeadReusableView.swift in Sources */,
+				A0FDB96E24BDA4A000713836 /* ItemCtionViewCell.swift in Sources */,
 				A057713324BD4B5500344C0F /* HomeHeadView.swift in Sources */,
 				A05770EA24BD403100344C0F /* AppDelegate.swift in Sources */,
 				A057713124BD4B2B00344C0F /* PublicData.swift in Sources */,

@@ -11,7 +11,8 @@ import UIKit
 class MyMainViewController: UIViewController ,UICollectionViewDelegate , UICollectionViewDataSource {
 
     var collectionView : UICollectionView?
-    var collectionReusableView :MainHeadReusableView?
+    
+    let itemCtionViewCell = "ItemCtionViewCell"
     
     
     override func viewDidLoad() {
@@ -20,17 +21,21 @@ class MyMainViewController: UIViewController ,UICollectionViewDelegate , UIColle
         self.view.backgroundColor = UIColor.white
                 
         let flowLayout = UICollectionViewFlowLayout.init()
-        let tempWid = floorf(Float((kWidth - 40)/3))
-        flowLayout.itemSize = CGSize(width: CGFloat(tempWid), height: CGFloat(tempWid))
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        let tempWid = floorf(Float((kWidth - 30)/5))
+        flowLayout.itemSize = CGSize(width: CGFloat(tempWid), height: CGFloat(80))
+        flowLayout.minimumLineSpacing = 5
+        flowLayout.minimumInteritemSpacing = 5
         flowLayout.sectionInset = UIEdgeInsets.init(top: 10, left: 5, bottom: 10, right: 5)
         flowLayout.headerReferenceSize = CGSize(width: kWidth, height: 80)
         
         collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width:kWidth , height: kHeight - CGFloat(kTabHig)), collectionViewLayout: flowLayout)
         collectionView?.delegate = self as UICollectionViewDelegate
         collectionView?.dataSource = self as UICollectionViewDataSource
-        collectionView?.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "classCell")
+        
+        collectionView?.register(UINib.init(nibName: itemCtionViewCell, bundle: nil), forCellWithReuseIdentifier: itemCtionViewCell)
+        
+//       collectionView?.register(UICollectionViewCell.classForCoder(), forCellWithReuseIdentifier: "classCell")
+        
         collectionView?.register(MainHeadReusableView.classForCoder(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headView")
         collectionView?.backgroundColor = UIColor.white
         collectionView?.showsVerticalScrollIndicator = false
@@ -40,62 +45,84 @@ class MyMainViewController: UIViewController ,UICollectionViewDelegate , UIColle
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
    
-        return 10
+        return 5
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let  cell  = collectionView.dequeueReusableCell(withReuseIdentifier:"classCell" , for: indexPath)
+        let  cell:ItemCtionViewCell  = collectionView.dequeueReusableCell(withReuseIdentifier:itemCtionViewCell, for: indexPath) as! ItemCtionViewCell
     
+        
         cell.backgroundColor  = randomColorAlpha()
+        
+        cell.itemName.text =  NSString.init(format:"%d分区_%d", indexPath.section ,indexPath.row) as String
+        
+        cell.itemImage.image = UIImage.init(named:"place_yonghu")
         
         return cell
     }
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         print(indexPath.row)
     }
    
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
+         
+        
          if kind == UICollectionView.elementKindSectionHeader   {
             
-            collectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath) as? MainHeadReusableView
+            let headview = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "headView", for: indexPath)
            
-            collectionReusableView?.titleLab?.text = "这是标题"
+            for view in headview.subviews {
+                view.removeFromSuperview()
+            }
+
+            let liview = MainHeadReusableView.init(frame: CGRect(x: 0, y: 0, width: kWidth, height: 80));
             
-//            return collectionReusableView!
+            liview.titleLab?.text = "这是标题"
+            
+            headview.addSubview(liview)
+            
+            return headview
+            
          }
-        return UIView.init() as! UICollectionReusableView
+          return UICollectionReusableView()
     }
     
-   
-//    viewForSupplem
+  /*
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+           return CGSize (width: kWidth, height: 100)
+       }
+
+ 
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
+            return 10
+    }
+  
     
-    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+
+            return 10
 
     }
 
-//    func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
-//
-//    }
-    
-    
-//    //返回HeadView的宽高
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHe
-//        aderInSection, section: Int) -> CGSize{
-//
-//        return CGSize(width: kWidth, height: 80)
-//
-//    }
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 
+          return  UIEdgeInsets.init(top: 10, left: 10, bottom: 10, right: 10)
+
+      }
+   */
 
 }
