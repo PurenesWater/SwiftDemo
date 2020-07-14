@@ -15,6 +15,12 @@
 		A057710124BD403400344C0F /* SwiftStatueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057710024BD403400344C0F /* SwiftStatueTests.swift */; };
 		A057710C24BD403400344C0F /* SwiftStatueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057710B24BD403400344C0F /* SwiftStatueUITests.swift */; };
 		A057712724BD46DE00344C0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712624BD46DE00344C0F /* SceneDelegate.swift */; };
+		A057712924BD4A2600344C0F /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712824BD4A2600344C0F /* MainTabbarController.swift */; };
+		A057712B24BD4A5E00344C0F /* HomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712A24BD4A5E00344C0F /* HomeMainViewController.swift */; };
+		A057712D24BD4A7200344C0F /* MyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712C24BD4A7200344C0F /* MyMainViewController.swift */; };
+		A057712F24BD4AE900344C0F /* MainHeadReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */; };
+		A057713124BD4B2B00344C0F /* PublicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057713024BD4B2B00344C0F /* PublicData.swift */; };
+		A057713324BD4B5500344C0F /* HomeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057713224BD4B5500344C0F /* HomeHeadView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		A057710B24BD403400344C0F /* SwiftStatueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStatueUITests.swift; sourceTree = "<group>"; };
 		A057710D24BD403400344C0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A057712624BD46DE00344C0F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A057712824BD4A2600344C0F /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		A057712A24BD4A5E00344C0F /* HomeMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainViewController.swift; sourceTree = "<group>"; };
+		A057712C24BD4A7200344C0F /* MyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainViewController.swift; sourceTree = "<group>"; };
+		A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeadReusableView.swift; sourceTree = "<group>"; };
+		A057713024BD4B2B00344C0F /* PublicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicData.swift; sourceTree = "<group>"; };
+		A057713224BD4B5500344C0F /* HomeHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeadView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +178,8 @@
 		A057711D24BD46BC00344C0F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A057712824BD4A2600344C0F /* MainTabbarController.swift */,
+				A057713024BD4B2B00344C0F /* PublicData.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -183,6 +197,7 @@
 		A057711F24BD46C800344C0F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A057712C24BD4A7200344C0F /* MyMainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +212,7 @@
 		A057712124BD46C800344C0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A057712E24BD4AE900344C0F /* MainHeadReusableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 		A057712324BD46C800344C0F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A057712A24BD4A5E00344C0F /* HomeMainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -228,6 +245,7 @@
 		A057712524BD46C800344C0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A057713224BD4B5500344C0F /* HomeHeadView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -364,7 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05770EE24BD403100344C0F /* ViewController.swift in Sources */,
+				A057712D24BD4A7200344C0F /* MyMainViewController.swift in Sources */,
+				A057712F24BD4AE900344C0F /* MainHeadReusableView.swift in Sources */,
+				A057713324BD4B5500344C0F /* HomeHeadView.swift in Sources */,
 				A05770EA24BD403100344C0F /* AppDelegate.swift in Sources */,
+				A057713124BD4B2B00344C0F /* PublicData.swift in Sources */,
+				A057712B24BD4A5E00344C0F /* HomeMainViewController.swift in Sources */,
+				A057712924BD4A2600344C0F /* MainTabbarController.swift in Sources */,
 				A057712724BD46DE00344C0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftStatue/Class/Base/PublicData.swift";
 				INFOPLIST_FILE = SwiftStatue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -556,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftStatue/Class/Base/PublicData.swift";
 				INFOPLIST_FILE = SwiftStatue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
